@@ -1,18 +1,21 @@
-import Navbar from './navbar';
-import Home from './home';
-import About from './about';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Navbar from './components/navbar';
+import Home from './pages/home';
+import About from './pages/about';
+
 
 function App() {
-
-
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-      <div className="content">
-          <Home />  
-          <About />
-      </div>
-    </div>
+      <div className="container mt-2" style={{ marginTop: 40 }}>
+        <Routes>
+          <Route exact path = "/" element = {<Home />} />
+          <Route path = "/about" element = {<About />} />
+        </Routes>
+      </div>  
+    </BrowserRouter>
+    
   );
 }
 

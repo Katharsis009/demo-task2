@@ -10,26 +10,82 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
-.navbar h1 {
-  color: #1ed461;
-}
+
 .navbar .links {
   margin-left: auto;
 }
-.navbar a {
+
+.navbar-item {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
-}
-.navbar a:hover {
   color: #1ed461;
 }
-.content {
-  max-width: 600px;
-  margin: 40px auto;
+
+.navbar-item:hover {
+  color: #1ed461;
+}
+
+:root {
+  --primary: #1ed461;
+  --secondary: #2d5b57;
+}
+
+body {
+  margin: 0;
   padding: 20px;
+  font-family: "Quicksand";
+  background: var(--secondary);
+}
+
+* {
+  color: #fff;
+  margin: 0;
+}
+
+p {
+  margin: 20px;
+  text-align: justify;
+  padding-top: 10px;
+  padding-right: 200px;
+  padding-bottom: 10px;
+  padding-left: 200px;
+}
+
+ul {
+  margin: 20px;
+  text-align: justify;
+  padding-top: 10px;
+  padding-right: 230px;
+  padding-bottom: 10px;
+  padding-left: 230px;
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.column {
+  float: left;
+  width: 23.6%;
+  padding: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
